@@ -1,0 +1,22 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/umbraco/masterpages/default.master" AutoEventWireup="true" %>
+
+<asp:Content ContentPlaceHolderID="ContentPlaceHolderDefault" runat="server">
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<umbraco:Item field="bodyHeader" useIfEmpty="pageName" insertTextBefore="&lt;title&gt;" insertTextAfter="&lt;/title&gt;" recursive="true" runat="server" />
+		<umbraco:Item field="metaKeywords" insertTextBefore="&lt;meta name=&quot;keywords&quot; content=&quot;" insertTextAfter="&quot;/&gt;" runat="server" />
+		<umbraco:Item field="metaDescription" insertTextBefore="&lt;meta name=&quot;description&quot; content=&quot;" insertTextAfter="&quot;/&gt;" runat="server" />
+		<script type="text/javascript" src="/scripts/jquery-1.8.2.min.js"></script>
+		<asp:ContentPlaceHolder Id="headContent" runat="server">
+			<!-- Insert default "headContent" markup here -->
+		</asp:ContentPlaceHolder>
+	</head>
+    <body>
+		<asp:ContentPlaceHolder Id="mainContent" runat="server">
+			<!-- Insert default "mainContent" markup here -->
+		</asp:ContentPlaceHolder>
+	</body>
+</html>
+</asp:Content>

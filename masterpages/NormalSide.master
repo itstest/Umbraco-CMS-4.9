@@ -1,0 +1,10 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/Master.master" AutoEventWireup="true" %>
+		
+	<asp:Content ContentPlaceHolderId="headContent" runat="server">
+		<!-- Insert "headContent" markup here -->
+	</asp:Content>
+		
+	<asp:Content ContentPlaceHolderId="mainContent" runat="server">
+		<umbraco:Item field="bodyHeader" useIfEmpty="pageName" insertTextBefore="&lt;h1&gt;" insertTextAfter="&lt;/h1&gt;" runat="server" />
+		<umbraco:Item field="bodyText" runat="server" />
+	</asp:Content>
